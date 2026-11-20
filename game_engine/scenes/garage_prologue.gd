@@ -92,4 +92,5 @@ func _on_btn_exit_garage_pressed():
 	update_mission_label()
 	show_dialogue("Abriendo el portón... La neblina ya cubrió la salida. Dios nos acompañe en la ruta.")
 	await get_tree().create_timer(2.0).timeout
-	print("[Prologo] Transicionando al Capitulo 1: Troncal 5 / Noche 1.")
+	print("[Prologo] Transicionando a la Carretera (Fase 4)...")
+	get_tree().change_scene_to_file("res://scenes/highway_drive.tscn")

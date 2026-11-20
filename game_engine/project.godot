@@ -43,3 +43,4 @@ buses/default_bus_layout="res://default_bus_layout.tres"
 [autoload]
 
 VehicleState="*res://scripts/vehicle_state.gd"
+SensorManager="*res://scripts/sensor_manager.gd"

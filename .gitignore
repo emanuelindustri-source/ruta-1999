@@ -15,3 +15,4 @@ preview_ruta_1999.mp4
 build_android/*.apk
 build_android/*.aab
 build_android/*.apks
+build_android/*.idsig
