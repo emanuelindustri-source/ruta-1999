@@ -1,0 +1,125 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8y9w2p4q1x3r"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_script"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0392157, 0.0470588, 0.0627451, 1)
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 32.0
+offset_top = 20.0
+offset_right = -32.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="LabelTelemetry" type="Label" parent="TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.717647, 0.0117647, 1)
+text = "DISPOSITIVO: XIAOMI REDMI | FPS REALES: 120 | VULKAN MOBILE"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelSubtitle" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.223529, 0.27451, 1)
+theme_override_font_sizes/font_size = 14
+text = "CONDUCCION NARRATIVA & TERROR VENEZOLANO"
+horizontal_alignment = 1
+
+[node name="LabelTitle" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.945098, 0.980392, 0.933333, 1)
+theme_override_font_sizes/font_size = 46
+text = "RUTA 1999"
+horizontal_alignment = 1
+
+[node name="LabelCar" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.552941, 0.6, 0.682353, 1)
+theme_override_font_sizes/font_size = 16
+text = "SEDAN ARAGUANEY '99 (1.6L BEIGE)"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnPrologue" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+text = "INICIAR PROLOGO: EL GARAJE DE MEDIANOCHE"
+
+[node name="BtnRoguelike" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "MODO 5 NOCHES EN LA CARRETERA (ROGUELIKE)"
+
+[node name="BtnSettings" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "AJUSTES GRAFICOS & TASA DE FPS (30 - 240 FPS)"
+
+[node name="BtnControls" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "CONTROLES (TACTIL / GIROSCOPIO / BAROMETRO)"
+
+[node name="BtnQuit" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "SALIR DEL JUEGO"
+
+[node name="FooterBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -40.0
+offset_right = -32.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LabelFooter" type="Label" parent="FooterBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.35, 0.4, 0.45, 1)
+theme_override_font_sizes/font_size = 12
+text = "RUTA 1999 v0.1.0 · ANDROID NATIVO · VULKAN FORWARD+ · DESARROLLADO CON ANTIGRAVITY"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnPrologue" to="." method="_on_btn_prologue_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnRoguelike" to="." method="_on_btn_roguelike_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnSettings" to="." method="_on_btn_settings_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnControls" to="." method="_on_btn_controls_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BtnQuit" to="." method="_on_btn_quit_pressed"]

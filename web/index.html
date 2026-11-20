@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUTA 1999 : Ánimas del Asfalto | Portal Oficial y Roadmap</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de Telemetría Dinámica -->
+  <div class="telemetry-bar">
+    <div class="telemetry-items">
+      <div class="telemetry-item"><span>VEHÍCULO:</span> SEDÁN 1.6L BEIGE (1999)</div>
+      <div class="telemetry-item"><span>ALTITUD:</span> <strong id="telemetry-alt">480 msnm</strong></div>
+      <div class="telemetry-item"><span>BARÓMETRO:</span> <strong id="telemetry-bar">955 hPa</strong></div>
+      <div class="telemetry-item"><span>TEMP MOTOR:</span> <strong id="telemetry-temp">82.0 °C</strong></div>
+      <div class="telemetry-item"><span>FATIGA:</span> <strong id="telemetry-fatiga">42%</strong></div>
+      <div class="telemetry-item"><span>CLIMA:</span> LLOVIZNA CONTINUA</div>
+    </div>
+    <button class="audio-toggle-btn" id="btn-audio-toggle">🔊 ACTIVAR AUDIO AMBIENTE</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-area">
+      <div class="logo-badge">VULKAN 120Hz</div>
+      <div class="logo-title">RUTA 1999</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#roadmap" class="active">Roadmap</a></li>
+        <li><a href="#vehiculo">El Vehículo</a></li>
+        <li><a href="#radio">Radio & Alcabalas</a></li>
+        <li><a href="#bestiario">Folclore</a></li>
+        <li><a href="#tecnica">Arquitectura SoC</a></li>
+        <li><a href="#galeria">Galería</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">CONDUCCIÓN NARRATIVA · TERROR PSICOLÓGICO · ROGUELIKE</span>
+      <h1>RUTA 1999: ÁNIMAS DEL ASFALTO</h1>
+      <p class="hero-sub">
+        Un viaje nocturno a través de las carreteras más oscuras y desoladas de la Venezuela de 1999 a bordo de un sedán clásico de 1.6L.
+        Desarrollado para exprimir al límite las APIs nativas de Android, pantallas de 120 a 240 Hz, audio espacial 3D y los SoCs más potentes del mercado.
+      </p>
+
+      <div class="hero-badges">
+        <div class="badge highlight">📱 Android 10 a 17 Nativo</div>
+        <div class="badge">⚡ Vulkan Mobile API</div>
+        <div class="badge">⏱️ 30 a 240 FPS Desacoplados</div>
+        <div class="badge">🧭 Barómetro + Giroscopio + Acelerómetro</div>
+        <div class="badge">📻 Frecuencia Policial y "Matraca"</div>
+        <div class="badge">🎙️ Voces IA Venezolanas (9 Idiomas)</div>
+      </div>
+
+      <div class="btn-group">
+        <a href="#roadmap" class="btn btn-primary">🗺️ Ver Roadmap en Vivo</a>
+        <a href="#vehiculo" class="btn btn-secondary">🚗 Explorar Habitáculo Interactivo</a>
+        <a href="#radio" class="btn btn-secondary">📻 Sintonizar Radio Policial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="container">
+    <div class="section-title">
+      <h2>🗺️ Hoja de Ruta de Desarrollo (Roadmap)</h2>
+      <p>Progreso en tiempo real de las 8 fases estructuradas del proyecto.</p>
+    </div>
+
+    <div class="roadmap-timeline">
+      <!-- Fase 1 -->
+      <div class="phase-card active">
+        <div class="phase-header">
+          <span class="phase-num">FASE 01</span>
+          <span class="phase-status status-active">EN PROGRESO (90%)</span>
+        </div>
+        <h3 class="phase-title">Fundación & Portal Web Interactivo</h3>
+        <p class="phase-desc">Estructura del proyecto, reglas maestras de desarrollo, especificaciones y portal web local con telemetría en vivo.</p>
+        <ul class="phase-tasks">
+          <li class="done">✓ Arquitectura de directorios local</li>
+          <li class="done">✓ Documento maestro GDD y Project Rules</li>
+          <li class="done">✓ Portal web responsivo con Web Audio API</li>
+          <li class="active">➤ Sincronización de activos y telemetría</li>
+        </ul>
+      </div>
+
+      <!-- Fase 2 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 02</span>
+          <span class="phase-status status-pending">SIGUIENTE FASE</span>
+        </div>
+        <h3 class="phase-title">Motor Godot 4.3 & Enlace Redmi ADB</h3>
+        <p class="phase-desc">Descarga e inicialización de Godot 4.3 portable en herramientas locales, configuración de Gradle y enlace directo por cable al Xiaomi Redmi.</p>
+        <ul class="phase-tasks">
+          <li>○ Despliegue de Godot 4.3 headless en tools/godot</li>
+          <li>○ Enlace con Android SDK y JDK 21 instalados</li>
+          <li>○ Test de renderizado Vulkan a 120Hz en Redmi</li>
+        </ul>
+      </div>
+
+      <!-- Fase 3 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 03</span>
+          <span class="phase-status status-pending">PENDIENTE</span>
+        </div>
+        <h3 class="phase-title">Prólogo del Garaje & Habitáculo 1999</h3>
+        <p class="phase-desc">Mecánica de preparación en el taller casero (aceite, agua, espejos, luces) e interactividad total del sedán beige.</p>
+        <ul class="phase-tasks">
+          <li>○ Malla 3D del interior beige (Esteem 1999)</li>
+          <li>○ Control de 4 ventanas eléctricas individuales</li>
+          <li>○ Seguros centralizados con pánico en NPCs</li>
+          <li>○ Descenso del carro y esconderse bajo el chasis</li>
+        </ul>
+      </div>
+
+      <!-- Fase 4 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 04</span>
+          <span class="phase-status status-pending">PENDIENTE</span>
+        </div>
+        <h3 class="phase-title">Cámaras Duales & Sensores de Hardware</h3>
+        <p class="phase-desc">Alternancia táctil 1ra/3ra persona, giroscopio de mirada libre, acelerómetro de inercia y sensor barométrico para altitud andina.</p>
+        <ul class="phase-tasks">
+          <li>○ Conmutador instantáneo 1ra / 3ra persona</li>
+          <li>○ Giroscopio para inspección de retrovisores y cabina</li>
+          <li>○ Barómetro: ahogo de motor y aviso de tormentas</li>
+        </ul>
+      </div>
+
+      <!-- Fase 5 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 05</span>
+          <span class="phase-status status-pending">PENDIENTE</span>
+        </div>
+        <h3 class="phase-title">Audio Espacial 3D, Foley & Voces IA</h3>
+        <p class="phase-desc">Diseño acústico binaural del motor 1.6L, radioemisoras con interferencia y doblaje neuronal en español venezolano con 9 idiomas.</p>
+        <ul class="phase-tasks">
+          <li>○ Síntesis de motor, frenos gastados y relés</li>
+          <li>○ Voces sintéticas con modismos y slang criollo</li>
+          <li>○ Subtítulos sincronizados (EN, ES, FR, IT, PT, JA, ZH)</li>
+        </ul>
+      </div>
+
+      <!-- Fase 6 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 06</span>
+          <span class="phase-status status-pending">PENDIENTE</span>
+        </div>
+        <h3 class="phase-title">Carretera, Climas & Criaturas del Folclore</h3>
+        <p class="phase-desc">Asfalto con troneras, ciclos de lluvia torrencial, tormentas eléctricas, nieve en Mérida y manifestaciones paranormales.</p>
+        <ul class="phase-tasks">
+          <li>○ Shaders de gotas de lluvia y limpiaparabrisas</li>
+          <li>○ Inteligencia artificial de El Silbón (sonido inverso)</li>
+          <li>○ Encuentros con La Sayona y El Carretón</li>
+        </ul>
+      </div>
+
+      <!-- Fase 7 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 07</span>
+          <span class="phase-status status-pending">PENDIENTE</span>
+        </div>
+        <h3 class="phase-title">Alcabalas, Matraca, Tráfico & Moteles</h3>
+        <p class="phase-desc">Sintonía de banda policial, entrega de documentos, extorsión con aviso a siguientes puestos, gandolas en vía y moteles para guardar partida.</p>
+        <ul class="phase-tasks">
+          <li>○ Sistema de diálogo e inspección en alcabalas</li>
+          <li>○ Radio policial activa con reportes de matrícula</li>
+          <li>○ Paradas en bomba PDV y guardado en Motel El Reposo</li>
+        </ul>
+      </div>
+
+      <!-- Fase 8 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 08</span>
+          <span class="phase-status status-pending">PENDIENTE</span>
+        </div>
+        <h3 class="phase-title">Perfiles Multi-SoC, Ajustes FPS & APK Final</h3>
+        <p class="phase-desc">Menús granulares de vídeo, optimización Snapdragon/MediaTek/Exynos/Unisoc/Amlogic, integración de monetización ética y APK instalable.</p>
+        <ul class="phase-tasks">
+          <li>○ Selector de 30 a 240 FPS y V-Sync</li>
+          <li>○ Pruebas y despliegue final en el Redmi conectado</li>
+          <li>○ Empaquetado APK / AAB para Google Play Store</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Interactive Explorer -->
+  <section id="vehiculo" class="container">
+    <div class="section-title">
+      <h2>🚗 El Vehículo: Araguaney '99 (Sedán 1.6L Beige)</h2>
+      <p>Un habitáculo 100% interactivo. Haz clic en los componentes para conocer su función técnica y mecánica de juego.</p>
+    </div>
+
+    <div class="vehicle-explorer">
+      <!-- Visual con Hotspots -->
+      <div class="vehicle-visual">
+        <img src="assets/images/Gemini_Generated_Image_4owb874owb874owb.png" alt="Cabina Esteem 1999" class="car-display-img">
+        <div class="hotspot-layer">
+          <div class="hotspot" id="main-hotspot" style="top: 56%; left: 36%;">!</div>
+        </div>
+      </div>
+
+      <!-- Panel de Detalles del Componente -->
+      <div class="vehicle-info-panel">
+        <div>
+          <div class="component-header">
+            <span class="component-tag" id="comp-tag">TABLERO & INSTRUMENTOS</span>
+            <h3 class="component-name" id="comp-name">Panel Clásico con Agujas Analógicas</h3>
+          </div>
+          <p class="component-details" id="comp-details">
+            Tablero icónico noventero en tono beige con odómetro mecánico, velocímetro hasta 200 km/h, tacómetro hasta 8.000 RPM, medidor de temperatura de aguja y luz de Check Engine que titila cuando la presión barométrica desciende en los Andes.
+          </p>
+          <div class="component-mechanics">
+            <h4>MECÁNICA EN EL JUEGO:</h4>
+            <p id="comp-mechanic">
+              La aguja de temperatura debe vigilarse al subir cuestas pronunciadas. Si pasa de 95°C, el ventilador del radiador se forzará al máximo y habrá que detenerse a pie a echar agua.
+            </p>
+          </div>
+        </div>
+
+        <div class="component-buttons">
+          <button class="comp-btn active" data-comp="dash">📊 Tablero</button>
+          <button class="comp-btn" data-comp="shifter">🕹️ Palanca P-R-N-D-2-L</button>
+          <button class="comp-btn" data-comp="windows">🪟 4 Ventanas</button>
+          <button class="comp-btn" data-comp="locks">🔒 Seguros</button>
+          <button class="comp-btn" data-comp="glovebox">🗄️ Guantera</button>
+          <button class="comp-btn" data-comp="domelight">💡 Luz Techo</button>
+          <button class="comp-btn" data-comp="radiator">♨️ Radiador</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radio Tuner Module -->
+  <section id="radio" class="container">
+    <div class="section-title">
+      <h2>📻 Sintonizador de Radio & Frecuencia Policial</h2>
+      <p>Escucha las transmisiones de la época o sintoniza la banda corta de las alcabalas para saber si están matraqueando.</p>
+    </div>
+
+    <div class="radio-box">
+      <div class="radio-faceplate">
+        <div class="radio-display">
+          <div class="freq-display" id="radio-freq-val">104.5 MHz FM</div>
+          <div class="freq-info" id="radio-info-val">Radio Éxitos Noventeros (Caracas / Centro)</div>
+        </div>
+
+        <div class="radio-controls">
+          <button class="radio-station-btn active" data-station="fm104">104.5 FM (Música '99)</button>
+          <button class="radio-station-btn" data-station="am890">890 AM (Noticias Vial)</button>
+          <button class="radio-station-btn" data-station="police">142.3 MHz (Alcabala)</button>
+          <button class="radio-station-btn" data-station="paranormal">66.6 MHz (Paranormal)</button>
+        </div>
+      </div>
+
+      <div class="radio-transcript">
+        <div>
+          <div class="transcript-header">TRANSCRIPCIÓN DE AUDIO SINTETIZADO EN VIVO</div>
+          <div class="transcript-body" id="radio-transcript-body">
+            [Sintonía FM nítida]<br>
+            "Estás en sintonía de Éxitos 104.5 FM... Transmitiendo en vivo para toda la región central. Son las 3:15 de la madrugada en este año 1999. Recuerde a los conductores en Troncal 5 manejar con precaución por las fuertes precipitaciones..."<br>
+            [Música pop y baladas de los 90 de fondo].
+          </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 8px;">
+          * Haz clic en los botones de sintonía para escuchar el sonido procesado en tiempo real con Web Audio API.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Folklore Bestiary -->
+  <section id="bestiario" class="container">
+    <div class="section-title">
+      <h2>👻 Bestiario del Folclore Venezolano</h2>
+      <p>Entidades ancestrales documentadas en la Colección Bicentenario y crónicas populares de carretera.</p>
+    </div>
+
+    <div class="bestiary-grid">
+      <!-- El Silbón -->
+      <div class="creature-card">
+        <span class="creature-badge">AMENAZA: EXTREMA · LLANOS & TRONCAL 5</span>
+        <h3 class="creature-name">El Silbón</h3>
+        <p class="creature-desc">Gigante famélico que carga un saco con los huesos de su padre. Vaga en las noches tormentosas emitiendo su melodía en escala ascendente.</p>
+        <div class="creature-rule">
+          <strong>REGLA DE SUPERVIVENCIA (SONIDO INVERSO):</strong>
+          Si escuchas el silbido atronador y cercano, está lejos en la sabana. Pero si el silbido suena apagado y lejano, ¡está pegado a tu ventana o en la maleta! No apagues el motor.
+        </div>
+      </div>
+
+      <!-- La Sayona -->
+      <div class="creature-card">
+        <span class="creature-badge">AMENAZA: ALTA · CURVAS & RÍOS</span>
+        <h3 class="creature-name">La Sayona</h3>
+        <p class="creature-desc">Espectro de mujer vestida de blanco que se aparece pidiendo auxilio en orillas solitarias a conductores de madrugada.</p>
+        <div class="creature-rule">
+          <strong>REGLA DE SUPERVIVENCIA:</strong>
+          Si te detienes a subirla, nunca la mires fijamente por el retrovisor. Al sentirse descubierta revela sus colmillos desgarradores y te arrebata el control del volante.
+        </div>
+      </div>
+
+      <!-- La Loca Luz Caraballo -->
+      <div class="creature-card">
+        <span class="creature-badge">AMENAZA: MODERADA / PSICOLÓGICA · PÁRAMO DE MÉRIDA</span>
+        <h3 class="creature-name">La Loca Luz Caraballo</h3>
+        <p class="creature-desc">Alma en pena que deambula entre Chachopo y Apartaderos buscando a sus hijos perdidos en medio de la neblina helada y los frailejones.</p>
+        <div class="creature-rule">
+          <strong>REGLA DE SUPERVIVENCIA:</strong>
+          Aparece cuando el barómetro desciende drásticamente y el radiador hierve. Si te pide que la lleves a la cumbre, respeta su silencio; si te burlas, desvía tu carro hacia el abismo.
+        </div>
+      </div>
+
+      <!-- El Carretón de Puerto Cabello -->
+      <div class="creature-card">
+        <span class="creature-badge">AMENAZA: CRÍTICA · AUTOPISTA COSTERA</span>
+        <h3 class="creature-name">El Carretón Fantasma</h3>
+        <p class="creature-desc">Carruaje envuelto en llamas arrastrado por caballos espectrales que cruza la autopista a medianoche anunciando muerte y desastre.</p>
+        <div class="creature-rule">
+          <strong>REGLA DE SUPERVIVENCIA:</strong>
+          Al oír el crujido de cadenas y relinchos sobre el asfalto, apaga las luces altas, oríllate de inmediato y no intentes rebasarlo jamás.
+        </div>
+      </div>
+
+      <!-- El Enano de la Catedral -->
+      <div class="creature-card">
+        <span class="creature-badge">AMENAZA: MODERADA · ENTRADAS DE PUEBLOS</span>
+        <h3 class="creature-name">El Enano de la Catedral</h3>
+        <p class="creature-desc">Figura con ropajes coloniales y rostro afable que pide fuego o una colmena de fósforos a conductores en paradas solitarias.</p>
+        <div class="creature-rule">
+          <strong>REGLA DE SUPERVIVENCIA:</strong>
+          Nunca bajes la ventanilla para darle fuego. En cuanto recibe la llama, crece desproporcionadamente hasta el techo del carro preguntando si quieres fuego eterno.
+        </div>
+      </div>
+
+      <!-- Ánimas del Camino -->
+      <div class="creature-card">
+        <span class="creature-badge">AMENAZA: NEUTRAL / PROTECCIÓN · TODAS LAS RUTAS</span>
+        <h3 class="creature-name">Las Ánimas del Camino</h3>
+        <p class="creature-desc">Capillas de piedra y cruces de madera erigidas donde ocurrieron accidentes fatales. Velas que nunca se apagan en el barro.</p>
+        <div class="creature-rule">
+          <strong>MECÁNICA VIAL:</strong>
+          Tocar suavemente la bocina o bajar la velocidad al pasar frente a ellas reduce el medidor de fatiga y te protege temporalmente contra emboscadas espectrales.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture Table -->
+  <section id="tecnica" class="container">
+    <div class="section-title">
+      <h2>⚙️ Matriz de Optimización Multi-SoC Android</h2>
+      <p>Configuración nativa para exprimir cada arquitectura de silicio desde teléfonos económicos hasta Galaxy S25 Ultra y Android TVs.</p>
+    </div>
+
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>FABRICANTE / SOC</th>
+          <th>GPU & ARQUITECTURA</th>
+          <th>PERFIL DE RENDERIZADO</th>
+          <th>TECNOLOGÍAS DE REESCALADO / APIS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Qualcomm Snapdragon</strong> (8 Gen 2 / 8 Elite)</td>
+          <td>Adreno 740 / Adreno 830</td>
+          <td>Ultra / Vulkan Forward+ (120-240 FPS)</td>
+          <td>Snapdragon Game Super Resolution (GSR), Game Mode API, sombreado PBR completo.</td>
+        </tr>
+        <tr>
+          <td><strong>MediaTek Dimensity</strong> (9200 / 9400 / 8300)</td>
+          <td>ARM Immortalis-G720 / G925</td>
+          <td>Alto / Vulkan Mobile (90-120 FPS)</td>
+          <td>MediaTek HyperEngine, compresión de texturas ASTC 4x4, sombreadores de baja latencia.</td>
+        </tr>
+        <tr>
+          <td><strong>MediaTek Helio</strong> (G99 / G96 / G88 / G85 / P70)</td>
+          <td>Mali-G52 / Mali-G57 MC2</td>
+          <td>Equilibrado / Eficiente (45-60 FPS)</td>
+          <td>Resolución dinámica 720p/1080p inteligente, perfil de partículas optimizado, sombreado liviano.</td>
+        </tr>
+        <tr>
+          <td><strong>Unisoc Tiger ("Tigre")</strong> (T606 / T612 / T616 / T618 / T820)</td>
+          <td>Mali-G57 / Mali-G52</td>
+          <td>Eficiente / Fluido (30-60 FPS)</td>
+          <td>LODs agresivos en vegetación, cubemaps estáticos en retrovisores y optimización de RAM.</td>
+        </tr>
+        <tr>
+          <td><strong>Samsung Exynos</strong> (850 / 1380 / 2200 / 2400)</td>
+          <td>AMD RDNA (Xclipse 920/940) & Mali</td>
+          <td>Escalable según modelo (45 a 120 FPS)</td>
+          <td>Optimizaciones térmicas adaptativas, FSR integrado, oclusión ambiental SSAO en gamas altas.</td>
+        </tr>
+        <tr>
+          <td><strong>Snapdragon Gamas 4 y 6</strong> (4 Gen 2 / 680 / 685 / 695)</td>
+          <td>Adreno 610 / 619</td>
+          <td>Equilibrado (45-60 FPS)</td>
+          <td>Vulkan Mobile con reducción de shaders pesados y física sincronizada a 60 ticks.</td>
+        </tr>
+        <tr>
+          <td><strong>Amlogic</strong> (Smart TVs 32" a 80")</td>
+          <td>Mali-G31 / G52 MP2</td>
+          <td>TV Leanback / 1080p escalado (60 FPS)</td>
+          <td>Soporte completo de D-Pad / Control Remoto, interfaz a 10 pies de distancia, mandos Bluetooth.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="galeria" class="container">
+    <div class="section-title">
+      <h2>📸 Galería de Conceptos Visuales</h2>
+      <p>Capturas de diseño conceptual que definen la dirección artística de <em>Ruta 1999</em>.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/images/Gemini_Generated_Image_4owb874owb874owb.png" alt="Conducción en Troncal 5">
+        <div class="gallery-item-caption">Cabina Esteem 1999 - Troncal 5 bajo lluvia torrencial</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/Gemini_Generated_Image_7g7dyo7g7dyo7g7d.png" alt="Páramo de Mucuchíes">
+        <div class="gallery-item-caption">Páramo de Mucuchíes (Mérida) - 3.450 msnm y niebla</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/Gemini_Generated_Image_6eil8g6eil8g6eil.png" alt="Gasolinera PDV y Motel">
+        <div class="gallery-item-caption">Estación de gasolina PDV y Motel El Reposo</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/Gemini_Generated_Image_5kkwv35kkwv35kkw.png" alt="Esteros de Camaguán">
+        <div class="gallery-item-caption">Esteros de Camaguán - A pie en la madrugada llanera</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/Gemini_Generated_Image_984w3r984w3r984w.png" alt="Menú de Pausa">
+        <div class="gallery-item-caption">Menú de pausa retro fósforo ámbar con calibración CRT</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/Gemini_Generated_Image_cbu9xacbu9xacbu9.png" alt="Alcabala Nocturna">
+        <div class="gallery-item-caption">Punto de control y alcabala policial de noche</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-highlight">RUTA 1999 : ÁNIMAS DEL ASFALTO</p>
+      <p>Desarrollado de forma integral por el agente inteligente <strong>Antigravity</strong>.</p>
+      <p>Compatibilidad garantizada: Android 10 a 17 · Vulkan Mobile · Audio 3D Foley · 120Hz-240Hz.</p>
+      <p style="margin-top: 12px; font-size: 0.8rem; color: #555;">© 1999 - 2026. Todos los derechos reservados. Basado en el folclore y carreteras de Venezuela.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/audio_engine.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
