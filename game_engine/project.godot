@@ -39,3 +39,7 @@ common/max_physics_steps_per_frame=8
 [audio]
 
 buses/default_bus_layout="res://default_bus_layout.tres"
+
+[autoload]
+
+VehicleState="*res://scripts/vehicle_state.gd"

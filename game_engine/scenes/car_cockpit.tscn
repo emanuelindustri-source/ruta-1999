@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://df7k2m9p1q4x8"]
+
+[ext_resource type="Script" path="res://scripts/car_cockpit.gd" id="1_cockpit_script"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_beige_plastic"]
+albedo_color = Color(0.82, 0.76, 0.65, 1)
+roughness = 0.85
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_black_trim"]
+albedo_color = Color(0.12, 0.12, 0.14, 1)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amber_cluster"]
+albedo_color = Color(0.05, 0.05, 0.05, 1)
+emission_enabled = true
+emission = Color(1, 0.72, 0.02, 1)
+emission_energy_multiplier = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glass"]
+transparency = 1
+albedo_color = Color(0.85, 0.92, 0.95, 0.35)
+roughness = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_dash"]
+material = SubResource("StandardMaterial3D_beige_plastic")
+size = Vector3(1.6, 0.45, 0.65)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wheel"]
+material = SubResource("StandardMaterial3D_beige_plastic")
+top_radius = 0.22
+bottom_radius = 0.22
+height = 0.04
+
+[sub_resource type="BoxMesh" id="BoxMesh_shifter"]
+material = SubResource("StandardMaterial3D_black_trim")
+size = Vector3(0.08, 0.28, 0.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_windshield"]
+material = SubResource("StandardMaterial3D_glass")
+size = Vector3(1.5, 0.7, 0.02)
+
+[node name="CarCockpit" type="Node3D"]
+script = ExtResource("1_cockpit_script")
+
+[node name="CameraFirstPerson" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38, 0.95, -0.15)
+current = true
+fov = 75.0
+
+[node name="CameraThirdPerson" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.85, 3.6)
+fov = 68.0
+
+[node name="CockpitMesh" type="Node3D" parent="."]
+
+[node name="Dashboard" type="MeshInstance3D" parent="CockpitMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.75)
+mesh = SubResource("BoxMesh_dash")
+
+[node name="ClusterDisplay" type="MeshInstance3D" parent="CockpitMesh/Dashboard"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.38, 0.12, 0.3)
+mesh = SubResource("BoxMesh_dash")
+skeleton = NodePath("../..")
+
+[node name="SteeringWheel" type="MeshInstance3D" parent="CockpitMesh"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.38, 0.75, -0.45)
+mesh = SubResource("CylinderMesh_wheel")
+
+[node name="Shifter" type="MeshInstance3D" parent="CockpitMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42, -0.38)
+mesh = SubResource("BoxMesh_shifter")
+
+[node name="GloveboxDoor" type="MeshInstance3D" parent="CockpitMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42, 0.58, -0.48)
+mesh = SubResource("BoxMesh_dash")
+
+[node name="Windshield" type="MeshInstance3D" parent="CockpitMesh"]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 1.05, -0.95)
+mesh = SubResource("BoxMesh_windshield")
+
+[node name="DomeLight" type="Node3D" parent="CockpitMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+
+[node name="InteriorOmniLight" type="OmniLight3D" parent="CockpitMesh/DomeLight"]
+visible = false
+light_color = Color(1, 0.92, 0.78, 1)
+light_energy = 1.2
+omni_range = 3.5
+
+[node name="FrontHeadlights" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -1.8)
+light_color = Color(1, 0.96, 0.85, 1)
+light_energy = 2.5
+spot_range = 45.0
+spot_angle = 32.0
+
+[node name="AudioStarter" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.5)
+bus = &"Engine"
+
+[node name="AudioEngineIdle" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.5)
+bus = &"Engine"
+
+[node name="AudioClick" type="AudioStreamPlayer3D" parent="."]
+bus = &"Foley"
+
+[node name="AudioLock" type="AudioStreamPlayer3D" parent="."]
+bus = &"Foley"
+
+[node name="AudioHorn" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -1.6)
+bus = &"Foley"
+
+[node name="AudioGlovebox" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0.6, -0.5)
+bus = &"Foley"
+
+[node name="AudioWindow" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 0.8, -0.2)
+bus = &"Foley"
+
+[node name="AudioWiper" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -0.9)
+bus = &"Foley"
